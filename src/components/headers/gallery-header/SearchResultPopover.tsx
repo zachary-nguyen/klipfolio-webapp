@@ -16,6 +16,8 @@ const useStyles = makeStyles((theme: Theme) =>
            textTransform: "none"
        },
        popper: {
+           marginTop: 3,
+           border: `1px solid ${theme.palette.primary.light}`,
            zIndex: 10
        },
     }),

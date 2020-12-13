@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme: Theme) =>
         chip: (props: Props) => ({
             borderRadius: 4,
             backgroundColor: props.selected ? theme.palette.primary.light : "",
+            "&&:focus":{
+                backgroundColor: props.selected ? theme.palette.primary.light : "white"
+            }
         })
     }),
 );
