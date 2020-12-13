@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import SimpleHeader from "../components/headers/SimpleHeader";
 import {Box, Button, Grid, Typography} from "@material-ui/core";
 import {App} from "../../codesets";
-import MetricCard from "../components/gallery/recommended-metrics/MetricCard";
 import {Link} from "react-router-dom";
 import {ROUTES} from "../routes/Routes";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";

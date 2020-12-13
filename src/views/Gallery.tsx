@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import GalleryHeader from "../components/headers/GalleryHeader";
+import GalleryHeader from "../components/headers/gallery-header/GalleryHeader";
 import RecommendedMetrics from "../components/gallery/recommended-metrics/RecommendedMetrics";
 import axios from "axios";
 import {App} from "../../codesets";

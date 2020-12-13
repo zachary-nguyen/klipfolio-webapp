@@ -14,5 +14,5 @@ After cloning repository, navigate to project directory and run `yarn install:al
 Run `yarn start:dev`
 
 # To start in production mode 
-
+Run `yarn build` then,<br/>
 Run `yarn start`

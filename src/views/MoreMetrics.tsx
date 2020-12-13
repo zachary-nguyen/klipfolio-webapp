@@ -57,7 +57,7 @@ const MoreMetrics = () => {
                 <Grid spacing={3} item container xs={12} direction={"row"}>
                     {metrics && metrics.length > 0 && metrics.map((metric: App.IMetrics, index: number) => {
                         return (
-                            <Grid key={index} item xs={2}>
+                            <Grid key={index} item xs={12} sm={6} md={4} lg={2}>
                                 <MetricCard metric={metric}/>
                             </Grid>
                         )

@@ -2,12 +2,10 @@ import React, {useEffect, useState} from "react";
 import {App} from "../../codesets";
 import SimpleHeader from "../components/headers/SimpleHeader";
 import {Box, Button, Grid, Typography} from "@material-ui/core";
-import MetricCard from "../components/gallery/recommended-metrics/MetricCard";
 import {Link} from "react-router-dom";
 import {ROUTES} from "../routes/Routes";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import ServiceCard from "../components/gallery/recommended-services/ServiceCard";
-import service from "../../backend/models/service";
 import axios from "axios";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -59,7 +57,7 @@ const MoreServices = () => {
                 <Grid spacing={3} item container xs={12} direction={"row"}>
                     {services && services.length > 0 && services.map((service: App.IServices, index: number) => {
                         return (
-                            <Grid key={index} item xs={2}>
+                            <Grid key={index} container justify={"center"} item xs={6} sm={6} md={4} lg={2}>
                                 <ServiceCard service={service}/>
                             </Grid>
                         )

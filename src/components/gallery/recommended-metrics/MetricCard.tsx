@@ -7,7 +7,7 @@ import {App} from "../../../../codesets";
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 238,
+        minWidth: 200,
         borderRadius: 0,
         paddingBottom: 0
     },

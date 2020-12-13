@@ -1,9 +1,7 @@
 import React from "react"
 import {Box, Grid, IconButton, Tooltip, Typography} from "@material-ui/core";
-import Facebook from "../../../assets/facebook-icon.png"
 import {App} from "../../../../codesets";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
-import service from "../../../../backend/models/service";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -28,7 +26,7 @@ const ServiceCard = (props: Props) => {
     const classes = useStyles();
 
     return(
-        <Grid container justify={"center"} spacing={2} item xs={12} direction={"column"}>
+        <Grid container justify={"center"} alignItems={"center"} spacing={2} direction={"column"}>
             <Grid item>
                 <Typography component={"span"}>
                     <Box fontWeight={600}>
