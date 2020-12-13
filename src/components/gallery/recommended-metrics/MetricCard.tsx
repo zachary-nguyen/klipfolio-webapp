@@ -114,7 +114,7 @@ const MetricCard = (props: Props) => {
                 <Grid container direction={"row"}>
                     <Grid xs={6} item>
                         <Typography component="span"  align={"left"} color="textPrimary" gutterBottom>
-                            <Box fontSize={24} fontWeight={800}>
+                            <Box fontSize={20} fontWeight={800}>
                                 {props.metric.value}
                             </Box>
                         </Typography>
