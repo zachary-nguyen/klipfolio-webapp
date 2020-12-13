@@ -1,0 +1,102 @@
+{
+  "metrics": [
+    {
+      "name": "MRR",
+      "value": "$92,327",
+      "percentageIncrease": "7%"
+    },
+    {
+      "name": "Revenue",
+      "value": "3.2K",
+      "percentageIncrease": "7%"
+    },
+    {
+      "name": "MRR",
+      "value": "$92,327",
+      "percentageIncrease": "7%"
+    },
+    {
+      "name": "Revenue",
+      "value": "3.2K",
+      "percentageIncrease": "7%"
+    },
+    {
+      "name": "Revenue",
+      "value": "3.2K",
+      "percentageIncrease": "7%"
+    },
+    {
+      "name": "MRR",
+      "value": "$92,327",
+      "percentageIncrease": "7%"
+    },
+    {
+      "name": "Revenue",
+      "value": "3.2K",
+      "percentageIncrease": "7%"
+    }
+  ],
+  "services": [
+    {
+      "name": "Facebook",
+      "icon": ""
+    },
+    {
+      "name": "Slack",
+      "icon": ""
+    },
+    {
+      "name": "Google Analytics",
+      "icon": ""
+    },
+    {
+      "name": "Dropbox",
+      "icon": ""
+    },
+    {
+      "name": "Google AdWords",
+      "icon": ""
+    },
+    {
+      "name": "Google Drive",
+      "icon": ""
+    }
+  ],
+  "modelled-data": [
+    {
+      "name": "Retention Expansion Data",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Retention Expansion Data",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Retention Expansion Data",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Retention Expansion Data",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Retention Expansion Data",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Retention Expansion Data",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Retention Expansion Data",
+      "authentication": "",
+      "query": ""
+    }
+  ]
+}
