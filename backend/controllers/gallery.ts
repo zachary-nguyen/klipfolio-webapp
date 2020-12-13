@@ -39,10 +39,12 @@ export default class GalleryController implements Controller {
                 metrics: MockData.metrics.slice(0,6).map((metric: any) => {
                     return new Metric(metric.name,metric.value,metric.percentageIncrease)
                 }),
-                services: MockData.services.map((service: any) => {
+                // Display 12
+                services: MockData.services.slice(0,11).map((service: any) => {
                     return new Service(service.name,service.icon)
                 }),
-                modelledData: MockData["modelled-data"].map((data: any) => {
+                // Display 6
+                modelledData: MockData["modelled-data"].slice(0,6).map((data: any) => {
                     return new ModelledData(data.name,data.authentication,data.query)
                 })
             }
@@ -81,7 +83,7 @@ export default class GalleryController implements Controller {
         try {
             // Generate our services from the mock-data, this is would technically be querying the DB
             // service type should be metric: App.IService but we don't have a real model stored in a DB
-            const services : App.IServices[] = MockData.metrics.map((service: any) => {
+            const services : App.IServices[] = MockData.services.map((service: any) => {
                 return new Service(service.name,service.icon)
             })
 
@@ -100,7 +102,7 @@ export default class GalleryController implements Controller {
         try {
             // Generate our modelled data from the mock-data, this is would technically be querying the DB
             // data type should be data: App.IModelledData but we don't have a real model stored in a DB
-            const modelledData : App.IModeledData[] = MockData.metrics.map((data: any) => {
+            const modelledData : App.IModeledData[] = MockData["modelled-data"].map((data: any) => {
                 return new ModelledData(data.name,data.authentication,data.query)
             })
 

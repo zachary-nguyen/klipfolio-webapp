@@ -1,14 +1,14 @@
 import React from "react";
+import {Box, Button, Grid, Typography} from "@material-ui/core";
 import {App} from "../../../../codesets";
-import {Button, Grid, Typography, Box} from "@material-ui/core";
-import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
-import MetricCard from "./MetricCard";
 import {Link} from "react-router-dom";
 import {ROUTES} from "../../../routes/Routes";
+import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
+import ServiceCard from "./ServiceCard";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-        moreMetrics: {
+        moreServices: {
             backgroundColor: "white",
             borderWidth: 2,
             textTransform: "none",
@@ -17,45 +17,48 @@ const useStyles = makeStyles((theme: Theme) =>
                 color: "white",
                 borderWidth: 2,
             }
+        },
+        servicesContainer: {
+            marginBottom: "1%"
         }
     }),
 );
 
 interface Props {
-    metrics: App.IMetrics[];
+    services: App.IServices[];
 }
 
-const RecommendedMetrics = (props: Props) => {
+const RecommendedServices = (props: Props) =>{
 
     const classes = useStyles();
 
-    return (
-        <Grid component={"section"} spacing={3} container direction={"column"}>
+    return(
+        <Grid component={"section"} spacing={4} container direction={"column"}>
             <Grid container>
                 <Typography component={"span"} gutterBottom variant={"h6"}>
                     <Box fontWeight={600}>
-                        Recommended Metrics
+                        Recommended Services
                     </Box>
                 </Typography>
             </Grid>
-            <Grid spacing={3} item container xs={12} direction={"row"}>
-                {props.metrics && props.metrics.length > 0 && props.metrics.map((metric: App.IMetrics, index: number) => {
+            <Grid className={classes.servicesContainer} spacing={3} item container xs={12} direction={"row"}>
+                {props.services && props.services.length > 0 && props.services.map((service: App.IServices, index: number) => {
                     return (
-                        <Grid key={index} item xs={12} sm={6} md={4} lg={2}>
-                            <MetricCard metric={metric}/>
+                        <Grid key={index} item xs>
+                            <ServiceCard service={service}/>
                         </Grid>
                     )
                 })}
             </Grid>
             <Grid container justify={"flex-end"}>
                 <Grid item>
-                    <Button component={Link} to={ROUTES.MORE_METRICS} className={classes.moreMetrics} color="primary" variant={"outlined"}>
-                        More metrics
+                    <Button component={Link} to={ROUTES.MORE_SERVICES} className={classes.moreServices} color="primary" variant={"outlined"}>
+                        More services
                     </Button>
                 </Grid>
             </Grid>
         </Grid>
     )
-};
+}
 
-export default RecommendedMetrics
+export default RecommendedServices;

@@ -4,6 +4,8 @@ import RecommendedMetrics from "../components/gallery/recommended-metrics/Recomm
 import axios from "axios";
 import {App} from "../../codesets";
 import {makeStyles} from "@material-ui/core/styles";
+import RecommendedServices from "../components/gallery/recommended-services/RecommendedServices";
+import ExistingModelledData from "../components/gallery/existing-modelled-data/ExistingModelledData";
 
 const useStyles = makeStyles({
     root: {
@@ -39,8 +41,8 @@ const Gallery = () => {
                 {galleryData &&
                     <div>
                         <RecommendedMetrics metrics={galleryData.metrics} />
-                        <RecommendedMetrics metrics={galleryData.metrics} />
-                        <RecommendedMetrics metrics={galleryData.metrics} />
+                        <RecommendedServices services={galleryData.services} />
+                        <ExistingModelledData modelledData={galleryData.modelledData} />
                     </div>
                 }
             </main>

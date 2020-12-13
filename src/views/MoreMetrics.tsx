@@ -58,11 +58,7 @@ const MoreMetrics = () => {
                     {metrics && metrics.length > 0 && metrics.map((metric: App.IMetrics, index: number) => {
                         return (
                             <Grid key={index} item xs={2}>
-                                <MetricCard
-                                    name={metric.name}
-                                    value={metric.value}
-                                    percentageIncrease={metric.percentageIncrease}
-                                />
+                                <MetricCard metric={metric}/>
                             </Grid>
                         )
                     })}

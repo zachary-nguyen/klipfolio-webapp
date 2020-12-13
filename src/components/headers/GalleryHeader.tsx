@@ -24,10 +24,6 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-interface Props {
-
-}
-
 const GalleryHeader = () => {
     const classes = useStyles();
 
@@ -54,10 +50,12 @@ const GalleryHeader = () => {
                                 />
                             </Grid>
                         </Grid>
-                        <Grid item xs={1}>
-                            <IconButton>
-                                <CloseIcon/>
-                            </IconButton>
+                        <Grid container justify={"flex-end"} item xs={1}>
+                            <Grid item>
+                               <IconButton>
+                                  <CloseIcon/>
+                               </IconButton>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Toolbar>

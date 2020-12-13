@@ -79,27 +79,74 @@
   "services": [
     {
       "name": "Facebook",
-      "icon": ""
+      "icon": "facebook-icon.png"
     },
     {
       "name": "Slack",
-      "icon": ""
+      "icon": "slack-icon.png"
     },
     {
       "name": "Google Analytics",
-      "icon": ""
+      "icon": "google-analytics.svg"
     },
     {
       "name": "Dropbox",
-      "icon": ""
-    },
-    {
-      "name": "Google AdWords",
-      "icon": ""
+      "icon": "dropbox-icon.png"
     },
     {
       "name": "Google Drive",
-      "icon": ""
+      "icon": "google-drive.svg"
+    },
+    {
+      "name": "MailChimp",
+      "icon": "mailchimp.svg"
+    },
+    {
+      "name": "Facebook",
+      "icon": "facebook-icon.png"
+    },
+    {
+      "name": "Slack",
+      "icon": "slack-icon.png"
+    },
+    {
+      "name": "Google Analytics",
+      "icon": "google-analytics.svg"
+    },
+    {
+      "name": "Dropbox",
+      "icon": "dropbox-icon.png"
+    },
+    {
+      "name": "Google Drive",
+      "icon": "google-drive.svg"
+    },
+    {
+      "name": "MailChimp",
+      "icon": "mailchimp.svg"
+    },   {
+      "name": "Facebook",
+      "icon": "facebook-icon.png"
+    },
+    {
+      "name": "Slack",
+      "icon": "slack-icon.png"
+    },
+    {
+      "name": "Google Analytics",
+      "icon": "google-analytics.svg"
+    },
+    {
+      "name": "Dropbox",
+      "icon": "dropbox-icon.png"
+    },
+    {
+      "name": "Google Drive",
+      "icon": "google-drive.svg"
+    },
+    {
+      "name": "MailChimp",
+      "icon": "mailchimp.svg"
     }
   ],
   "modelled-data": [
@@ -114,7 +161,22 @@
       "query": ""
     },
     {
-      "name": "Retention Expansion Data",
+      "name": "LTV to CAC Data",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Sales Target",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Lead",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "GA Sessions by Source and Country and Browser and Pages",
       "authentication": "",
       "query": ""
     },
@@ -129,12 +191,22 @@
       "query": ""
     },
     {
-      "name": "Retention Expansion Data",
+      "name": "LTV to CAC Data",
       "authentication": "",
       "query": ""
     },
     {
-      "name": "Retention Expansion Data",
+      "name": "Sales Target",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "Lead",
+      "authentication": "",
+      "query": ""
+    },
+    {
+      "name": "GA Sessions by Source and Country and Browser and Pages",
       "authentication": "",
       "query": ""
     }
