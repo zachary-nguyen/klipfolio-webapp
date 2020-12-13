@@ -21,6 +21,6 @@ module.exports = {
         ]
     },
     target: "node",
-    externals: [{ mongoose: 'commonjs mongoose', express: 'commonjs express' }],
+    externals: [{ express: 'commonjs express' }],
     plugins: [new NodemonPlugin(), new webpack.ContextReplacementPlugin(/require_optional/,/mongoose/,/express/)]
 };
