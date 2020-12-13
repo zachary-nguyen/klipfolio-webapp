@@ -40,7 +40,7 @@ const RecommendedMetrics = (props: Props) => {
     const classes = useStyles();
 
     return (
-        <Grid spacing={3} container direction={"column"}>
+        <Grid component={"section"} spacing={3} container direction={"column"}>
             <Grid container>
                 <Typography component={"span"} gutterBottom variant={"h6"}>
                     <Box fontWeight={600}>
@@ -51,7 +51,7 @@ const RecommendedMetrics = (props: Props) => {
             <Grid spacing={3} item container xs={12} direction={"row"}>
                 {props.metrics && props.metrics.length > 0 && props.metrics.map((metric: App.IMetrics, index: number) => {
                     return (
-                        <Grid key={index} item>
+                        <Grid key={index} item xs={2}>
                             <MetricCard
                                 name={metric.name}
                                 value={metric.value}

@@ -35,7 +35,8 @@ export default class GalleryController implements Controller {
         try {
             // Prepare our gallery data
             const galleryData: App.IGalleryData = {
-                metrics: MockData.metrics.map((metric: any) => {
+                // Display 6
+                metrics: MockData.metrics.slice(0,6).map((metric: any) => {
                     return new Metric(metric.name,metric.value,metric.percentageIncrease)
                 }),
                 services: MockData.services.map((service: any) => {

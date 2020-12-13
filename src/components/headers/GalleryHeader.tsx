@@ -53,9 +53,6 @@ const GalleryHeader = () => {
                                     }}
                                 />
                             </Grid>
-                              <Grid item>
-
-                              </Grid>
                         </Grid>
                         <Grid item xs={1}>
                             <IconButton>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import GalleryHeader from "../components/gallery/GalleryHeader";
+import GalleryHeader from "../components/headers/GalleryHeader";
 import RecommendedMetrics from "../components/gallery/recommended-metrics/RecommendedMetrics";
 import axios from "axios";
 import {App} from "../../codesets";
@@ -32,13 +32,16 @@ const Gallery = () => {
             .catch(err => console.log(err))
     },[])
 
-    console.log(galleryData)
     return(
         <div>
             <GalleryHeader/>
             <main className={classes.root}>
                 {galleryData &&
-                    <RecommendedMetrics metrics={galleryData.metrics} />
+                    <div>
+                        <RecommendedMetrics metrics={galleryData.metrics} />
+                        <RecommendedMetrics metrics={galleryData.metrics} />
+                        <RecommendedMetrics metrics={galleryData.metrics} />
+                    </div>
                 }
             </main>
         </div>
