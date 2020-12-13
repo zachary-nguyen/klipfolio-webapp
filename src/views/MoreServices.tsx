@@ -35,7 +35,6 @@ const MoreServices = () => {
     useEffect(() => {
         axios.get("/api/gallery/services")
             .then((res) => {
-                console.log(res.data)
                 if(res.status === 200) {
                     setServices(res.data)
                 }

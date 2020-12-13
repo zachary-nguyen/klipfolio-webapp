@@ -58,11 +58,11 @@ const SearchResultPopover = (props: Props) => {
             placement={"bottom"}
         >
             <List className={classes.container}>
-                <ListItem>
+                <ListItem key={"chips-container"}>
                     <Grid container direction={"row"} spacing={2}>
-                        {props.tags && props.tags.map((tag: Tags) => {
+                        {props.tags && props.tags.map((tag: Tags,index: number) => {
                             return (
-                                <Grid item>
+                                <Grid key={index} item>
                                     <CategoryFilterChip
                                         onClick={() => props.onClick(tag)}
                                         selected={tag.selected}
