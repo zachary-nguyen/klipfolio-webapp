@@ -30,11 +30,14 @@ interface Props {
     percentageIncrease: String;
 }
 
+/**
+ * Helper method to generate random data points
+ */
 const generateRandomData = () => {
     const randomData = [];
 
     for(let  i = 0; i < 15; i++) {
-        randomData.push((Math.random() * 10) + 1)
+        randomData.push((Math.random() * 2) + 1)
     }
 
     return randomData;
@@ -43,6 +46,7 @@ const generateRandomData = () => {
 const MetricCard = (props: Props) => {
     const classes = useStyles();
 
+    // Generate Chart data
     const data = (canvas: any) => {
         const ctx = canvas.getContext("2d");
         const gradient = ctx.createLinearGradient(0, 0, 0, 100);
@@ -50,10 +54,10 @@ const MetricCard = (props: Props) => {
         gradient.addColorStop(1, 'rgba(74,181,255,0)');
 
         return {
-            labels: ["02:00","04:00","06:00","08:00","10:00","12:00","14:00","16:00","18:00","20:00","22:00","00:00"],
+            labels: ["0","1","2","3","4","5","6","7","8","9","10"],
             datasets: [
                 {
-                    backgroundColor : gradient, // Put the gradient here as a fill color
+                    backgroundColor : gradient,
                     borderColor : "rgba(74,181,255,1)",
                     borderWidth: 2,
                     data : generateRandomData()
@@ -62,6 +66,7 @@ const MetricCard = (props: Props) => {
         }
     }
 
+    // Set chart options
     const options={
         legend: {
             display: false
