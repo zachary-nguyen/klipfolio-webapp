@@ -13,6 +13,12 @@ const useStyles = makeStyles((theme: Theme) =>
             maxHeight: 100,
             maxWidth: 100,
             boxShadow: "rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;"
+        },
+        serviceName: {
+            fontSize: "1rem",
+            [theme.breakpoints.down('xl')]: {
+                fontSize: "0.8rem"
+            },
         }
     }),
 );
@@ -28,7 +34,7 @@ const ServiceCard = (props: Props) => {
     return(
         <Grid container justify={"center"} alignItems={"center"} spacing={2} direction={"column"}>
             <Grid item>
-                <Typography component={"span"}>
+                <Typography component={"span"} className={classes.serviceName}>
                     <Box fontWeight={600}>
                         {props.service.name}
                     </Box>

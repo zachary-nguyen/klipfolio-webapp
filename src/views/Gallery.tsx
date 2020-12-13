@@ -9,7 +9,7 @@ import ExistingModelledData from "../components/gallery/existing-modelled-data/E
 
 const useStyles = makeStyles({
     root: {
-        padding: "5% 2% 2% 2%"
+        padding: "5% 3.5% 2% 3%"
     },
 });
 

@@ -7,7 +7,7 @@ import {App} from "../../../../codesets";
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 200,
+        minWidth: 180,
         borderRadius: 0,
         paddingBottom: 0
     },
@@ -21,8 +21,9 @@ const useStyles = makeStyles({
         fontSize: 11
     },
     chartContainer: {
-        height: 100,
-        width: "100%"
+        width: "100%",
+        maxHeight: 95,
+        height: 95,
     }
 });
 
@@ -76,6 +77,7 @@ const MetricCard = (props: Props) => {
                 radius: 0
             }
         },
+        maintainAspectRatio : false,
         scales: {
             yAxes: [
                 {
