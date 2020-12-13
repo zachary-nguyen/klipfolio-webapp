@@ -38,7 +38,7 @@ const ExistingModelledData = (props: Props) => {
             <Grid container>
                 <Typography component={"span"} gutterBottom variant={"h6"}>
                     <Box fontWeight={600}>
-                        Recommended Services
+                        Existing Modelled Data
                     </Box>
                 </Typography>
             </Grid>
