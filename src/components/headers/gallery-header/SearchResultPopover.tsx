@@ -1,5 +1,5 @@
 import React, {Dispatch, SetStateAction} from "react";
-import {Button, Grid, List, ListItem, ListItemSecondaryAction, ListItemText} from "@material-ui/core";
+import {Button, Grid, List, ListItem, ListItemSecondaryAction, ListItemText, Typography} from "@material-ui/core";
 import {Assets, Tags} from "./GalleryHeader";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import Popper from '@material-ui/core/Popper';
@@ -13,8 +13,14 @@ const useStyles = makeStyles((theme: Theme) =>
            color: "black"
        }),
        listItem:{
+           "& span":{
+               fontWeight: 600,
+           },
            textTransform: "none"
        },
+        secondaryText: {
+            color: "lightgrey"
+        },
        popper: {
            marginTop: 3,
            border: `1px solid ${theme.palette.primary.light}`,
@@ -71,7 +77,9 @@ const SearchResultPopover = (props: Props) => {
                         <ListItem key={index} onClick={() => onAssetClick(value)} component={Button}>
                             <ListItemText className={classes.listItem} primary={value.asset}/>
                             <ListItemSecondaryAction>
-                                {value.category}
+                                <Typography className={classes.secondaryText}>
+                                    {value.category}
+                                </Typography>
                             </ListItemSecondaryAction>
                         </ListItem>
                     )
