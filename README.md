@@ -2,7 +2,7 @@
 A simple gallery page for Klipfolio <br/>
 
 # App can be found deployed
-https://herokuapp.klipfolio-webapp.com
+https://klipfolio-webapp.herokuapp.com/
 
 
 # Getting Started
