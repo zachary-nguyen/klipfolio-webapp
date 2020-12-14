@@ -174,8 +174,8 @@ const assets : Assets[] = [
     {asset: "Manager", category: "Role"},
     {asset: "Aerospace", category: "Industry"},
     {asset: "Energy", category: "Industry"},
-    {asset: "Easy", category: "Difficulty Level"},
-    {asset: "Hard", category: "Difficulty Level"},
+    {asset: "Average Profit Margin", category: "Finance"},
+    {asset: "Gross Profit Margin", category: "Finance"},
 
 ]
 
