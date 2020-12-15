@@ -21,9 +21,10 @@ beforeAll(async () => {
 
 })
 
-afterAll(async () => {
+afterAll(async done => {
     await browser.close();
     await teardownDevServer();
+    done();
 })
 
 /**
@@ -44,6 +45,10 @@ describe("end to end test navigation",  () => {
         await page2.goto("http://localhost:8080/")
         await page3.goto("http://localhost:8080/")
     })
+
+    afterAll(async done => {
+        done();
+    });
 
     it("navigates to more metrics page",async () => {
         await page.click("#more-metrics")

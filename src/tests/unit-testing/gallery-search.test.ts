@@ -1,5 +1,9 @@
 import {filteredValues, Tags} from "../../components/headers/gallery-header/GalleryHeader";
 
+afterAll(async done => {
+    done();
+})
+
 
 describe("Test search filter logic", () => {
 
@@ -29,6 +33,10 @@ describe("Test search filter logic", () => {
                 selected: true
             },
         ]
+    });
+
+    afterAll(async done => {
+        done();
     });
 
     it("returns all assets unfiltered", async () => {
