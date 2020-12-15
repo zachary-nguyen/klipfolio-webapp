@@ -9,7 +9,7 @@ import MoreModelledData from "../views/MoreModelledData";
 export const ROUTES = {
     GALLERY: "/",
     MORE_SERVICES: "/more-services",
-    MORE_MODELLED_DATA: "/more-modolled-data",
+    MORE_MODELLED_DATA: "/more-modelled-data",
     MORE_METRICS: "/more-metrics"
 }
 

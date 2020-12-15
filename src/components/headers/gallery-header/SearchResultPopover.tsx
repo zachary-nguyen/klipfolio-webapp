@@ -50,6 +50,7 @@ const SearchResultPopover = (props: Props) => {
 
     return (
         <Popper
+            id={"popover"}
             open={props.open}
             anchorEl={props.anchorEl}
             disablePortal

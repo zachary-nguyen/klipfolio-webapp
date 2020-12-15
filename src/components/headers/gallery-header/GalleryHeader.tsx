@@ -125,6 +125,7 @@ const GalleryHeader = () => {
                             <ClickAwayListener onClickAway={handleClose}>
                                 <Grid item xs={7} md={4}>
                                     <TextField
+                                        id={"search"}
                                         ref={ref}
                                         className={classes.search}
                                         placeholder={"Search..."}
