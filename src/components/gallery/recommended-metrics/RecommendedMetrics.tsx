@@ -49,7 +49,7 @@ const RecommendedMetrics = (props: Props) => {
             </Grid>
             <Grid container justify={"flex-end"}>
                 <Grid item>
-                    <Button component={Link} to={ROUTES.MORE_METRICS} className={classes.moreMetrics} color="primary" variant={"outlined"}>
+                    <Button id={"more-metrics"} component={Link} to={ROUTES.MORE_METRICS} className={classes.moreMetrics} color="primary" variant={"outlined"}>
                         More metrics
                     </Button>
                 </Grid>

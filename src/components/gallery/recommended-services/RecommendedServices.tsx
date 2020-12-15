@@ -52,7 +52,7 @@ const RecommendedServices = (props: Props) =>{
             </Grid>
             <Grid container justify={"flex-end"}>
                 <Grid item>
-                    <Button component={Link} to={ROUTES.MORE_SERVICES} className={classes.moreServices} color="primary" variant={"outlined"}>
+                    <Button id={"more-services"} component={Link} to={ROUTES.MORE_SERVICES} className={classes.moreServices} color="primary" variant={"outlined"}>
                         More services
                     </Button>
                 </Grid>

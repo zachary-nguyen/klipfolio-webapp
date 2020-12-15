@@ -1,4 +1,3 @@
-import * as dotenv from "dotenv";
 import * as express from "express";
 import * as path from "path";
 import * as cors from "cors";
@@ -58,6 +57,11 @@ export default class App {
         this.app.get("*", (_, response) => {
             response.sendFile(path.resolve(__dirname,"..","build","index.html"));
         });
+    }
+
+    // express instance getter
+    getExpressInstance() {
+        return this.app;
     }
 
 }

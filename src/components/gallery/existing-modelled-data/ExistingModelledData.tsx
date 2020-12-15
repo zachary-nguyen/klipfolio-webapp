@@ -53,7 +53,7 @@ const ExistingModelledData = (props: Props) => {
             </Grid>
             <Grid container justify={"flex-end"}>
                 <Grid item>
-                    <Button component={Link} to={ROUTES.MORE_MODELLED_DATA} className={classes.moreModelledData} color="primary" variant={"outlined"}>
+                    <Button id={"more-data"} component={Link} to={ROUTES.MORE_MODELLED_DATA} className={classes.moreModelledData} color="primary" variant={"outlined"}>
                         More modelled data
                     </Button>
                 </Grid>

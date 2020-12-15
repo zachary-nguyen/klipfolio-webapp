@@ -35,6 +35,24 @@ export interface Tags {
     selected: boolean;
 }
 
+/**
+ * Filtering logic for search field, get all selected tags and filter search results based on tags
+ * */
+export const filteredValues = (tags: Tags[], searchValue: String) : Assets[] => {
+
+    const selectedCategories = tags.map((tag: Tags) => {
+        if(tag.selected){
+            return tag.name;
+        }
+        return "";
+    });
+
+    return assets.filter((value : Assets) =>
+        value.asset.toUpperCase().indexOf(searchValue.toUpperCase()) !== -1
+        && selectedCategories.includes(value.category)
+    )
+}
+
 const GalleryHeader = () => {
     const classes = useStyles();
 
@@ -60,7 +78,7 @@ const GalleryHeader = () => {
                 selected: true
             },
             {
-                name: "Difficulty Level",
+                name: "Finance",
                 selected: true
             },
         ]
@@ -94,23 +112,6 @@ const GalleryHeader = () => {
         }));
     }
 
-    /**
-     * Filtering logic for search field, get all selected tags and filter search results based on tags
-     * */
-    const filteredValues = () : Assets[] => {
-
-       const selectedCategories = tags.map((tag: Tags) => {
-           if(tag.selected){
-               return tag.name;
-           }
-           return "";
-       });
-
-       return assets.filter((value : Assets) =>
-            value.asset.toUpperCase().indexOf(searchValue.toUpperCase()) !== -1
-            && selectedCategories.includes(value.category)
-        )
-    }
 
     return (
         <div className={classes.grow}>
@@ -143,7 +144,7 @@ const GalleryHeader = () => {
                                                          tags={tags}
                                                          onClick={onTagClick}
                                                          setSearchValue={setSearchValue}
-                                                         values={filteredValues()}
+                                                         values={filteredValues(tags,searchValue)}
                                     />
                                 </Grid>
                             </ClickAwayListener>
@@ -174,9 +175,6 @@ const assets : Assets[] = [
     {asset: "Manager", category: "Role"},
     {asset: "Aerospace", category: "Industry"},
     {asset: "Energy", category: "Industry"},
-    {asset: "Average Profit Margin", category: "Finance"},
-    {asset: "Gross Profit Margin", category: "Finance"},
-
 ]
 
 export default GalleryHeader;
