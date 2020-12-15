@@ -70,8 +70,6 @@ describe("end to end test navigation",  () => {
 describe("Test Search Bar Filtering",  () => {
 
     let page: any;
-    let page2: any;
-    let page3: any;
 
     beforeAll(async () => {
         page = await browser.newPage();
@@ -95,7 +93,5 @@ describe("Test Search Bar Filtering",  () => {
 
     afterAll(async () => {
         await page.close();
-        await page2.close();
-        await page3.close();
     })
 })
