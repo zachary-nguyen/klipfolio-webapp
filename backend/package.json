@@ -40,7 +40,7 @@
     "start:prod": "set NODE_ENV=production && ts-node server.ts",
     "start:dev": "webpack --watch",
     "build": "webpack --config webpack.config.js",
-    "test": "jest "
+    "test": "jest --detectOpenHandles"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
