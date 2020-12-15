@@ -49,7 +49,7 @@
     "build:frontend": "react-scripts build",
     "serve": "cd backend/server && node build/server.js",
     "test:integration": "cd backend && yarn test",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject",
     "heroku-prebuild": "yarn install:all"
   },
