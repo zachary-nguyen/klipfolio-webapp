@@ -11,6 +11,10 @@ describe('Test Gallery End Points', () => {
         server = app.getExpressInstance();
     })
 
+    afterAll(async done => {
+        done();
+    });
+
     it('Test /api/gallery for GalleryData', async done => {
         const res = await request(server).get("/api/gallery");
         const metrics = res.body.metrics;
