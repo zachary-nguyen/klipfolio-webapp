@@ -10,9 +10,9 @@ beforeAll(async () => {
     jest.setTimeout(30000);
 
     await setupDevServer({
-        command: 'yarn start:dev',
+        command: 'yarn start',
         launchTimeout: 30000,
-        port: 3000
+        port: 8080
     })
 
     // launch browser
@@ -36,9 +36,9 @@ describe("end to end test navigation",  () => {
         page2 = await browser.newPage();
         page3 = await browser.newPage();
 
-        await page.goto("http://localhost:3000/")
-        await page2.goto("http://localhost:3000/")
-        await page3.goto("http://localhost:3000/")
+        await page.goto("http://localhost:8080/")
+        await page2.goto("http://localhost:8080/")
+        await page3.goto("http://localhost:8080/")
     })
 
     it("navigates to more metrics page",async () => {
